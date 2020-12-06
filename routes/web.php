@@ -12,6 +12,9 @@ $router->group(['middleware'=>'json'], function() use ($router){
 		$router->get('/create','UsersController@create');
 		$router->get('/logout','UsersController@logout');
 		$router->get('/usuario_empresa','UsersController@empresa');
+		// Cotizacion
+		$router->get('/documentos','DocumentoController@index');
+		$router->post('/crear_documento','DocumentoController@create');
 	});
 });
 
