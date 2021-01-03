@@ -18,20 +18,13 @@ class ItemController extends Controller
       $documentos =
     }
     function crear(Request $request){
-      if ($request->isJson()) {
          $item = new ItemSencillo;
          $item->Cantidad = $request->Cantidad;
          $item->Descripcion = $request->Descripcion;
          $item->TamanoH = $request->TamanoH;
-         $isSave = $item->save();
 
-         // $actualizar = ItemSencillo::where('IdItema', 67)
-         // ->update([
-         //    'cantidad' => 100,
-         // ]);
-      }else{
-         return response()->json(['ERROR'=>'FORMATO NO AUTORIZADO'],401);
-      }
+         $isSave = $item->save();
+;
     }
 }
 

@@ -9,17 +9,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 
-class Documento_detalle extends Model {
+class Tercero extends Model {
 
-	protected $primaryKey = "id_detalle";
-	 protected $table = 'documento_detalle';
-	 public $timestamps = false;
+	protected $primaryKey = "id_tercero";
+
 
    protected $fillable = [
-        'empresa_id','documento_id','tipo_documento','observaciones','cantidad','descripcion','	val_unitario','val_total','deleted'
+        'nombre'
     ];
 
-    protected $hidden = [
-        'password',
-    ];
+    // protected $hidden = [
+    //     'password',
+    // ];
 }

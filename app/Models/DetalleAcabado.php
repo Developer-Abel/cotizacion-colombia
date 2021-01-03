@@ -12,11 +12,11 @@ use Laravel\Lumen\Auth\Authorizable;
 class DetalleAcabado extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable, HasFactory;
-
+    protected $primaryKey = "Iddetalle_acabado";
     protected $fillable = [
-        'TipoDocDetalle_id', 'Acabado_id'
+        'detalle_id', 'acabado_id'
     ];
-    protected $table = 'tipodocdetalle_acabados';
+    protected $table = 'detalle_acabado';
     public $timestamps = false;
 
 

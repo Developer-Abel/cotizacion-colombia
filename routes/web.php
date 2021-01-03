@@ -15,6 +15,11 @@ $router->group(['middleware'=>'json'], function() use ($router){
 		// Cotizacion
 		$router->get('/documentos','DocumentoController@index');
 		$router->post('/crear_documento','DocumentoController@create');
+		$router->post('/editar','DocumentoController@edit');
+		$router->get('/acabados','AcabadoController@index');
+		/** Terceros **/
+		$router->get('/clientes','TerceroController@index_cli');
+		$router->post('/getCliente','TerceroController@getCliente');
 	});
 });
 
